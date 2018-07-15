@@ -12,7 +12,7 @@
     <artifactId>spring-dubbo-consumer</artifactId>
     <packaging>war</packaging>
 
-    <name>spring-dubbo-consumer Maven Webapp</name>
+    <name>spring-dubbo-consumer</name>
     <url>http://www.example.com</url>
 
     <properties>

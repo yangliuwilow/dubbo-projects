@@ -15,7 +15,7 @@
     <!-- 使用dubbo协议，在20880端口暴露服务 -->
     <dubbo:protocol name="dubbo" port="20880"/>
 
-    <bean id="userService" class="com.willow.service.impl.UserImpl"/>
+    <bean id="empService" class="com.willow.service.impl.EmpServiceImpl"/>
 
-    <dubbo:service interface="com.willow.service.UserService" ref="userService"/>
+    <dubbo:service interface="com.willow.service.EmpService" ref="empService"/>
 </beans>
