@@ -14,7 +14,7 @@ public interface EmpMapper {
 
     int saveEmp(Emp record);
 
-    Emp selectByPrimaryKey(Integer id);
+    Emp selectById(Integer id);
 
     int updateEmp(Emp record);
 

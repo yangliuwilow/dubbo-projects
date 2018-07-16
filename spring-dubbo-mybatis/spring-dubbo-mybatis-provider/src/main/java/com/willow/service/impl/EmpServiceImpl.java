@@ -32,7 +32,7 @@ public class EmpServiceImpl  implements EmpService{
 
 
     public  Emp selectById (Integer id){
-          return  empMapper.selectByPrimaryKey(id);
+          return  empMapper.selectById(id);
     }
 
 

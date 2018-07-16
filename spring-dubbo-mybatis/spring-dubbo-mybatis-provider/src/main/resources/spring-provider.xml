@@ -7,13 +7,13 @@
 
 
     <!-- 提供方应用名称，用于计算依赖关系 -->
-    <dubbo:application name="spring-dubbo-provider"/>
+    <!--<dubbo:application name="spring-dubbo-provider"/>
 
-    <!-- 使用multicast注册中心暴露服务地址   默认为2181端口 -->
+    &lt;!&ndash; 使用multicast注册中心暴露服务地址   默认为2181端口 &ndash;&gt;
     <dubbo:registry address="zookeeper://192.168.7.108:2181"/>
 
-    <!-- 使用dubbo协议，在20880端口暴露服务 -->
-    <dubbo:protocol name="dubbo" port="20880"/>
+    &lt;!&ndash; 使用dubbo协议，在20880端口暴露服务 &ndash;&gt;
+    <dubbo:protocol name="dubbo" port="20880"/>-->
 
     <bean id="empService" class="com.willow.service.impl.EmpServiceImpl"/>
 
