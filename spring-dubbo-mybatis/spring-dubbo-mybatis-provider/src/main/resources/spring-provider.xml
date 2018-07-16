@@ -10,7 +10,7 @@
     <dubbo:application name="spring-dubbo-provider"/>
 
     <!-- 使用multicast注册中心暴露服务地址   默认为2181端口 -->
-    <dubbo:registry address="zookeeper://192.168.16.200:2181"/>
+    <dubbo:registry address="zookeeper://192.168.7.108:2181"/>
 
     <!-- 使用dubbo协议，在20880端口暴露服务 -->
     <dubbo:protocol name="dubbo" port="20880"/>
