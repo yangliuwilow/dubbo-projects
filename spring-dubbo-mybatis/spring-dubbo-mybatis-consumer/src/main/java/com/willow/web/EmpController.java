@@ -4,6 +4,7 @@ import com.willow.entity.Emp;
 import com.willow.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -20,12 +21,12 @@ public class EmpController {
     @Autowired
     EmpService empService;
 
-    @ResponseBody
     @RequestMapping("/list")
-    public String emp(){
+    public String list(Model model){
         List<Emp> emps = empService.selectList(new Emp()); // 执行远程方法
         emps.forEach(emp -> System.out.println(emp.toString())) ; // 显示调用结果
-        return emps.toString() ;
+        model.addAttribute("emps",emps);
+        return "emp/list" ;
     }
 
     @ResponseBody
