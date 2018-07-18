@@ -2,11 +2,10 @@
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xmlns="http://www.springframework.org/schema/beans"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
-        http://www.springframework.org/schema/context
-    http://www.springframework.org/schema/context/spring-context.xsd">
+       ">
 
 
 
@@ -16,8 +15,7 @@
     <!-- 使用multicast广播注册中心暴露发现服务地址 -->
     <dubbo:registry address="zookeeper://192.168.7.108:2181" />
 
-    <!-- 自动扫描controller包下的所有类，使其认为spring mvc的控制器 -->
-    <context:component-scan base-package="com.willow"/>
+
 
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
     <dubbo:reference id="empService" interface="com.willow.service.EmpService" />
