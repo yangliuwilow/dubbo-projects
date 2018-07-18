@@ -15,7 +15,7 @@ public class SpringDubboProvider
 {
     public static void main( String[] args )
     {
-        /*ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"spring-provider.xml"});
+         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"spring-provider.xml"});
         context.start();
         while (true){
             try {
@@ -23,7 +23,7 @@ public class SpringDubboProvider
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        }*/
+        }
 
        /* Resource[] resources = new Resource[0];
         try {

@@ -25,6 +25,13 @@ public class MyInvocationHandler implements InvocationHandler {
 
     public Object object;
 
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        // System.out.println("参数："+args[0]);
+        Object returnVal= method.invoke(object,args);
+        return returnVal;
+    }
+
     //1、给代理对象实例化，2、返回一个代理类对象
     public Object blind(Object object) {
         this.object = object;
@@ -32,12 +39,7 @@ public class MyInvocationHandler implements InvocationHandler {
         return Proxy.newProxyInstance(object.getClass().getClassLoader(), object.getClass().getInterfaces(), this);
     }
 
-    @Override
-    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-       // System.out.println("参数："+args[0]);
-        Object returnVal= method.invoke(object,args);
-        return returnVal;
-    }
+
 }
 class TestProxy{
     public static void main(String[] args) {
