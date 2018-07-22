@@ -50,8 +50,5 @@ public class EmpServiceImpl  implements EmpService{
     }
 
 
-    public Integer deleteEmp (Integer id){
-        return  empMapper.deleteByPrimaryKey(id);
-    }
 
 }

@@ -16,6 +16,8 @@
     <dubbo:protocol name="dubbo" port="20880"/>-->
 
     <bean id="empService" class="com.willow.service.impl.EmpServiceImpl"/>
-
     <dubbo:service interface="com.willow.service.EmpService" ref="empService"/>
+
+    <bean id="employeeService" class="com.willow.service.impl.EmployeeServiceImpl"/>
+    <dubbo:service interface="com.willow.service.EmployeeService" ref="employeeService"/>
 </beans>
